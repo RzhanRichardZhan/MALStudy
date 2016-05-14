@@ -1,4 +1,13 @@
 class Anime:
+    """
+    An anime from MAL
+    === Attributes ===
+    @type id : int
+    @type title : str
+    @type scores : List[int]
+    ==
+    """
+    
     def __init__(self, anime):
         self.id = int(anime.series_animedb_id.__str__()[19:-20])
         self.title = anime.series_title.__str__()[14:-15]
@@ -14,6 +23,9 @@ class Anime:
         self.scores.append(other.scores[0])
 
     def get_id(self):
+        """
+        @rtype : str
+        """
         return self.id.__str__()
         
     def __str__(self):
